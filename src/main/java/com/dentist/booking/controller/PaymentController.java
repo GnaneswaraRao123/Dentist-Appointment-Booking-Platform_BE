@@ -17,7 +17,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/payments")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {"http://localhost:5173", "http://localhost:3000", "https://dentist-appointment-booking-platfor-one.vercel.app"})
 public class PaymentController {
 
     private final PaymentService paymentService;
@@ -62,3 +62,5 @@ public class PaymentController {
         return ResponseEntity.ok(ApiResponse.success("Payments retrieved", payments));
     }
 }
+
+

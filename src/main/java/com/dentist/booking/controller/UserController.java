@@ -18,7 +18,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/users")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {"http://localhost:5173", "http://localhost:3000", "https://dentist-appointment-booking-platfor-one.vercel.app"})
 public class UserController {
 
     private final UserService userService;
@@ -70,3 +70,5 @@ public class UserController {
         return ResponseEntity.ok(ApiResponse.success("User deleted"));
     }
 }
+
+

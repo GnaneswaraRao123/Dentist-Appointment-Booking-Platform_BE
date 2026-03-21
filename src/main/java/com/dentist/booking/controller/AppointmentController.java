@@ -24,7 +24,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {"http://localhost:5173", "http://localhost:3000", "https://dentist-appointment-booking-platfor-one.vercel.app"})
 public class AppointmentController {
 
     private final AppointmentService appointmentService;
@@ -141,3 +141,5 @@ public class AppointmentController {
         return ResponseEntity.ok(ApiResponse.success("New UTR generated successfully", appointment));
     }
 }
+
+

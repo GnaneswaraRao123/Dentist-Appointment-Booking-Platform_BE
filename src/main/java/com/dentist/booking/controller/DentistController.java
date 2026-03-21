@@ -19,7 +19,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {"http://localhost:5173", "http://localhost:3000", "https://dentist-appointment-booking-platfor-one.vercel.app"})
 public class DentistController {
 
     private final DentistService dentistService;
@@ -104,3 +104,5 @@ public class DentistController {
         return ResponseEntity.ok(ApiResponse.success("Dentist updated successfully", dentist));
     }
 }
+
+
